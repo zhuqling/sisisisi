@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_large"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1.0"
+            android:background="@color/gray_press" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_margin="@dimen/margin_small"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_size_small" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1.0"
+            android:background="@color/gray_press" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/login_mobile"
+            style="@style/EditTextStyle"
+            android:drawableLeft="@drawable/ic_mobile"
+            android:drawablePadding="@dimen/margin_small"
+            android:hint="@string/hint_mobile"
+            android:inputType="phone"
+            android:maxLength="11" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/margin" >
+
+            <EditText
+                android:id="@+id/identify_code_et"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1"
+                android:background="@drawable/corners_white"
+                android:hint="@string/label_identifying_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="@dimen/margin_small"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/get_identifying"
+                android:layout_width="120dp"
+                android:layout_height="fill_parent"
+                android:layout_gravity="right"
+                android:background="@drawable/corners_rich_pink_selector"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lable_get_identifying"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/TextViewStyle.Label"
+            android:layout_gravity="left"
+            android:layout_marginTop="@dimen/margin"
+            android:textColor="@color/theme_main_text"
+            android:text="@string/lable_no_get_identifying"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_forget_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:layout_gravity="right"
+            android:textColor="@color/theme_main_text"
+            android:text="@string/label_forget_password"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="@dimen/margin_large_big"
+            android:text="@string/login" />
+
+        <TextView
+            android:id="@+id/phone_login_protocol"
+            style="@style/TextViewStyle.Label"
+            android:layout_gravity="left"
+            android:layout_marginTop="@dimen/margin"
+            android:textColor="@color/gray_text"
+            />
+    </LinearLayout>
+
+</LinearLayout>

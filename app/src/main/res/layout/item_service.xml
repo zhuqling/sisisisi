@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@drawable/seller_service_bg"
+              android:gravity="center_horizontal"
+    >
+
+
+    <!--<com.android.volley.toolbox.NetworkImageView-->
+        <!--android:id="@+id/iv_image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="170dp"-->
+        <!--android:minWidth="170dp"-->
+        <!--android:src="@drawable/ic_default_square"-->
+        <!--/>-->
+    <include layout="@layout/item_square_image" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:gravity="left"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:id="@+id/tv_name"
+            style="@style/TextViewStyle"
+            android:singleLine="true"
+            android:layout_weight="2"
+            android:layout_marginRight="2dp"/>
+        <TextView
+            android:gravity="right"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:id="@+id/tv_time"
+            android:singleLine="true"
+            style="@style/TextViewStyle"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:textColor="@color/theme_price"
+        android:layout_marginBottom="@dimen/margin_small"
+        />
+</LinearLayout>

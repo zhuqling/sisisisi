@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yizan.community.activity.IdentityAuthActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin"
+                android:text="@string/msg_open_door_apply_notice"
+                android:textColor="@color/theme_main_text"
+                android:textSize="@dimen/text_size"
+                />
+
+            <include layout="@layout/comm_divide_line"/>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="left"
+                android:paddingLeft="@dimen/margin">
+
+                <TableRow
+                    style="@style/tab_row"
+                    >
+
+                    <TextView
+                        style="@style/tab_row_left"
+                        android:text="@string/auth_district_name"/>
+
+                    <LinearLayout
+                        style="@style/tab_row_right">
+
+                        <TextView
+                            android:id="@+id/tv_district"
+                            style="@style/tab_row_input"
+                            android:hint="@string/hint_click_select"
+                            />
+
+                        <include layout="@layout/comm_divide_line"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/tab_row">
+
+                    <TextView
+                        style="@style/tab_row_left"
+                        android:text="@string/auth_building_num"/>
+
+
+                    <LinearLayout
+                        style="@style/tab_row_right">
+
+                        <TextView
+                            android:id="@+id/tv_building_num"
+                            style="@style/tab_row_input"
+                            android:layout_width="wrap_content"
+                            android:drawablePadding="@dimen/margin_micro"
+                            android:drawableRight="@drawable/down_arrow"
+                            android:gravity="center"
+                            android:hint="@string/msg_please_select"
+                            />
+
+                        <include layout="@layout/comm_divide_line"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    style="@style/tab_row">
+
+                    <TextView
+                        style="@style/tab_row_left"
+                        android:text="@string/auth_room_num"/>
+
+                    <LinearLayout
+                        style="@style/tab_row_right">
+
+                        <TextView
+                            android:id="@+id/tv_room_num"
+                            style="@style/tab_row_input"
+                            android:layout_width="wrap_content"
+                            android:drawablePadding="@dimen/margin_micro"
+                            android:drawableRight="@drawable/down_arrow"
+                            android:gravity="center"
+                            android:hint="@string/msg_please_select"
+                            />
+
+                        <include layout="@layout/comm_divide_line"/>
+                    </LinearLayout>
+
+                </TableRow>
+
+                <TableRow style="@style/tab_row">
+
+                    <TextView
+                        style="@style/tab_row_left"
+                        android:text="@string/auth_user_name"
+                        />
+
+                    <LinearLayout
+                        style="@style/tab_row_right">
+
+                        <EditText
+                            android:id="@+id/et_name"
+                            style="@style/tab_row_input"
+                            />
+
+                        <include layout="@layout/comm_divide_line"/>
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow style="@style/tab_row">
+
+                    <TextView
+                        style="@style/tab_row_left"
+                        android:text="@string/auth_tel"/>
+
+                    <LinearLayout
+                        style="@style/tab_row_right">
+
+                        <EditText
+                            android:id="@+id/et_tel"
+                            style="@style/tab_row_input"
+                            android:inputType="phone"
+                            />
+                    </LinearLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <include layout="@layout/comm_divide_line"/>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_large_biger"
+                android:background="@drawable/corners_pink_selector"
+                android:text="@string/submit"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

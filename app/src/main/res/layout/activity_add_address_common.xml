@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/margin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextViewStyle"
+            android:text="@string/addr_reciver"
+            android:layout_margin="@dimen/margin"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <EditText
+                android:id="@+id/add_addr_reciver"
+                style="@style/EditTextStyle.NoPadding"
+                android:hint="@string/addr_reciver_hint"
+                android:textColor="@color/theme_black_text"/>
+            <include layout="@layout/comm_divide_line"/>
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="@string/addr_mobile"
+                android:layout_margin="@dimen/margin"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <EditText
+                    android:id="@+id/add_addr_mobile"
+                    style="@style/EditTextStyle.NoPadding"
+                    android:hint="@string/addr_mobile_hint"
+                    android:phoneNumber="true"
+                    android:maxLength="11"
+                    android:textColor="@color/theme_black_text"/>
+                <include layout="@layout/comm_divide_line"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="@string/addr_address"
+                android:layout_margin="@dimen/margin"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/add_addr_choose_area"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:hint="@string/addr_address_hint1"
+                    android:textColor="@color/theme_black_text"/>
+                <include layout="@layout/comm_divide_line"/>
+                <EditText
+                    android:id="@+id/add_addr_detail"
+                    style="@style/EditTextStyle.NoPadding"
+                    android:hint="@string/addr_address_hint2"
+                    android:textColor="@color/theme_black_text"/>
+                <include layout="@layout/comm_divide_line"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

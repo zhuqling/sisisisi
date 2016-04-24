@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@drawable/divider_list"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin"
+            android:showDividers="middle">
+
+            <RelativeLayout
+                android:id="@+id/join_business_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/join_business_star"
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/join_business_star"
+                    android:text="@string/business_type"/>
+
+                <Spinner
+                    android:id="@+id/join_type_spinner"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:entries="@array/business_type"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/join_logo_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/join_logo_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_down"/>
+
+                <com.zongyou.library.widget.CircleImageView
+                    android:id="@+id/join_logo_image"
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/join_logo_arrow"
+                    android:src="@drawable/ic_default_square"/>
+
+                <TextView
+                    android:id="@+id/join_logo_star"
+                    style="@style/TextViewStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/join_logo_star"
+                    android:text="@string/business_logo"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/join_name_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/business_name"/>
+
+                <EditText
+                    android:id="@+id/join_name_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/type_none"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_jy_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/type_jy"/>
+
+                <TextView
+                    android:id="@+id/join_jy_tv"
+                    style="@style/TextViewStyle.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/select_none"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@color/white"
+            android:divider="@drawable/divider_list"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:id="@+id/join_area_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/msg_place_area_text"/>
+
+                <TextView
+                    android:id="@+id/join_area_tv"
+                    style="@style/TextViewStyle.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/select_none"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/address_business"/>
+                <TextView
+                    android:id="@+id/join_address_tv"
+                    style="@style/TextViewStyle.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/select_none"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_street_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+                <EditText
+                    android:id="@+id/join_street_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/type_none"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_range_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/server_area_text"/>
+                <TextView
+                    android:id="@+id/join_range_tv"
+                    style="@style/TextViewStyle.Gray"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:drawableRight="@drawable/ic_arrow_right"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="@string/msg_error_server_area"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_mobile_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/staff_tel"/>
+
+                <EditText
+                    android:id="@+id/join_mobile_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/type_none"
+                    android:inputType="phone"
+                    android:maxLength="11"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/shop_corporation_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/shop_corporation"/>
+
+                <EditText
+                    android:id="@+id/shop_corporation_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/type_none"
+                    android:maxLength="18"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_idcard_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:paddingRight="@dimen/margin">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/id_card"/>
+
+                <EditText
+                    android:id="@+id/join_idcard_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:digits="1234567890xX"
+                    android:gravity="right|center_vertical"
+                    android:hint="@string/type_none"
+                    android:maxLength="18"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_licences_id1_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <TextView
+                    android:id="@+id/join_licences_id1_star"
+                    style="@style/TextViewStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_marginRight="@dimen/margin"
+                    android:text="@string/card_forceground"/>
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/join_card1"
+                    android:layout_width="140dp"
+                    android:layout_height="88dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_card_froceground"/>
+                <ImageView
+                    android:id="@+id/join_licences_id1_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/join_licences_id2_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+                <TextView
+                    android:id="@+id/join_licences_id2_star"
+                    style="@style/TextViewStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:text="@string/card_back"
+                    android:layout_marginRight="@dimen/margin"/>
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/join_card2"
+                    android:layout_width="140dp"
+                    android:layout_height="88dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_card_bg"/>
+                <ImageView
+                    android:id="@+id/join_licences_id2_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/join_licences_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin">
+
+                <ImageView
+                    android:id="@+id/join_licences_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_arrow_right"/>
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/join_licences"
+                    android:layout_width="140dp"
+                    android:layout_height="88dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_toLeftOf="@id/join_licences_arrow"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_licences"/>
+
+                <TextView
+                    android:id="@+id/join_licences_star"
+                    style="@style/TextViewStyle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/star"
+                    android:textColor="@color/theme_main_text"/>
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/join_licences_star"
+                    android:text="@string/licences_option"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin_small">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="@string/business_introduction"/>
+
+                <EditText
+                    android:id="@+id/join_introduction_et"
+                    style="@style/EditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="@null"
+                    android:gravity="right|top"
+                    android:hint="@string/hint_introduction"
+                    android:maxLength="200"
+                    android:maxLines="5"
+                    android:padding="@dimen/margin_micro"
+                    android:singleLine="false"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/join_submit"
+            style="@style/ButtonStyle"
+            android:text="@string/submit"/>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    lintOptions {
+        abortOnError false
+    }
+    defaultConfig {
+        applicationId "com.zhaioto.zhaijia"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 8
+        versionName "1.0"
+        multiDexEnabled true
+        buildConfigField 'boolean', 'MULTI_CATES', 'true'
+        buildConfigField 'String', 'MAP_ID', '"WNRBZ-QBKA3-DD43U-3C6BS-TDRYT-67FSH"'
+        buildConfigField 'String', 'WX_APP_ID', '"wx84ca610fce9ab38f"'
+        buildConfigField 'String', 'STAT_KEY', '"A94ZLZZKZ11F"'
+        buildConfigField 'String', 'APP_CHANNEL', '"FanWe"'
+        buildConfigField 'boolean', 'WEB_MSG', 'true' //消息跳转（是否跳转WEB,掌管定制）
+        buildConfigField 'boolean', 'GOOD_DETAIL_SQUARE', 'false' //商品详情，广告图改成方形
+        buildConfigField 'boolean', 'USER_PROPERTY_GUARD', 'false' //显示物业功能
+        buildConfigField 'boolean', 'ADDRESS_SIMPLE', 'false' //地址添加，定位功能只作标注（是否跳转WEB,掌管定制）
+        manifestPlaceholders = [TENCENTMAPSDK_VALUE: 'WNRBZ-QBKA3-DD43U-3C6BS-TDRYT-67FSH', JPUSH_APPKEY_VALUE: '5442be8ea0e22b66d02597b8']
+    }
+    productFlavors {
+
+        zhaioto {
+            applicationId "com.zhaioto.zhaijia"
+            versionCode 1
+            versionName "1.0"
+            buildConfigField 'boolean', 'WEB_MSG', 'true' //消息跳转（是否跳转WEB,掌管定制）
+            manifestPlaceholders = [JPUSH_APPKEY_VALUE: 'e7adc7191f04745e328edd3a']
+            buildConfigField 'String', 'APP_CHANNEL', '"o2o_zhaioto"'
+            buildConfigField 'String', 'WX_APP_ID', '"wx18314d2830104367"'
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.outputFile = new File(output.outputFile.parent, (variant.name.contains("Release") ? variant.name.replace("Release", "") + "-Release" : variant.name) + "-c-v" + variant.versionName + "-" + variant.versionCode + ".apk");
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    compile 'com.etsy.android.grid:library:1.0.5'
+    compile 'com.github.2tu:ZYLibrary:1.0.9'
+
+//    zhaiotoCompile project(path: ':seallibrary', configuration: 'zhaiotoRelease')
+    compile(name: 'seallibrary', ext: 'aar')
+}

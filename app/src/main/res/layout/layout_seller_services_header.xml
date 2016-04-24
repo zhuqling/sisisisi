@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              tools:context="com.yizan.community.activity.SellerServicesActivity">
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/roll_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/banner_height"
+        app:rollviewpager_hint_mode="point"
+        app:rollviewpager_play_delay="3000"/>
+    <include layout="@layout/comm_divide_line" />
+    <LinearLayout
+        android:id="@+id/ll_seller_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin">
+
+        <com.zongyou.library.widget.CustomImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/image_height"
+            android:layout_height="@dimen/image_height"
+            android:src="@drawable/ic_default_square"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewStyle"
+                android:text=""
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/theme_black_text"
+                />
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/TextViewStyle"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text=""
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/theme_grey_text"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_right"/>
+    </LinearLayout>
+    <include layout="@layout/comm_divide_line" />
+
+</LinearLayout>

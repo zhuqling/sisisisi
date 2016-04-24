@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yizan.community.activity.DistrictListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/edittext_height"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small">
+
+        <EditText
+            android:id="@+id/et_keys"
+            style="@style/EditTextStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:maxLength="20"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"
+            android:layout_marginRight="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"
+            android:text="@string/search"
+            />
+    </LinearLayout>
+
+    <include layout="@layout/comm_divide_region"/>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/theme_divide_line"
+        android:dividerHeight="0.5dp"
+        android:listSelector="@drawable/list_selector"/>
+
+    <include layout="@layout/empty_view" />
+</LinearLayout>

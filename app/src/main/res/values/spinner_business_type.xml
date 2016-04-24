@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="business_type">
+        <item>个人加盟</item>
+        <item>商家加盟</item>
+    </string-array>
+</resources>

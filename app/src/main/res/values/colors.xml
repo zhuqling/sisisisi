@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主题颜色 -->
+    <color name="theme">#FF2D4B</color>
+    <!--黑色字体-->
+    <color name="theme_black_text">#313233</color>
+    <!--灰色字体-->
+    <color name="theme_grey_text">#979797</color>
+    <!--按钮按下-->
+    <color name="theme_btn_press">#F7415B</color>
+    <!--按钮常态-->
+    <color name="theme_btn_normal">#FF2D4B</color>
+    <!--按钮禁用状态-->
+    <color name="theme_btn_disable">#979797</color>
+
+    <!--提示-->
+    <color name="theme_hint">#BEBEBE</color>
+    <!--主题背景-->
+    <color name="theme_background">#ECEBEB</color>
+    <!--主题字体-->
+    <color name="theme_main_text">#FF2D4B</color>
+    <!--价格颜色-->
+    <color name="theme_price">#FF2D4B</color>
+
+    <!--链接字体-->
+    <color name="theme_link_text">#01BA0B</color>
+    <!--黑色按钮边框-->
+    <color name="theme_btn_border_black">#010101</color>
+    <!--主题按钮边框-->
+    <color name="theme_btn_border_light">#FB631D</color>
+    <!--tab常态字体-->
+    <color name="theme_tab_normal_text">#9D9D9D</color>
+    <!--tab按下字体-->
+    <color name="theme_tab_press_text">#FB631D</color>
+    <!--红色字体-->
+    <color name="theme_red_text">#E7305E</color>
+    <!--红色背景-->
+    <color name="theme_red_background">#FF2D4B</color>
+    <!-- 分隔线 -->
+    <color name="theme_divide_line">#DEDCDD</color>
+    <!-- Title文字颜色 -->
+    <color name="theme_title_text">#000000</color>
+    <!-- Title背景颜色 -->
+    <color name="theme_title_background">#FFFFFF</color>
+
+    <!-- 订单列表分类TAB -->
+    <color name="page_tab_background_selected">#FFFFFF</color>
+    <color name="page_tab_background_normal">#F1F1F1</color>
+
+    <!-- 灰色背景 -->
+    <color name="theme_gray_background">#F1F1F1</color>
+
+    <color name="white">#ffffff</color>
+
+    <color name="shop_car">#3c3c3c</color>
+
+    <color name="rightnow_buy">#979797</color>
+
+    <color name="text_grey_bg">#E0E0E0</color>
+    
+
+
+    <!-- UI通用背景颜色 -->
+
+    <color name="half_translucence">#70000000</color>
+
+
+    <color name="black_text">#484444</color>
+    <color name="gray_text">#202123</color>
+
+    <color name="gray_text_shallow">#919191</color>
+    <color name="frame_color">#B5B5B5</color>
+    <color name="gray_white">#FAFAFA</color>
+    <color name="light_grey">#DEDEDE</color>
+
+    <color name="shallow_gray_text">#A39FA2</color>
+    <color name="shallow_gray">#D9D7D6</color>
+    <color name="gray">#F3EFEE</color>
+    <color name="blue_press">#4bbecf</color>
+    <color name="simple_gray">#F7F7F7</color>
+    <color name="list_press">#FBFAFA</color>
+    <color name="pink_press">#01b282</color>
+
+    <color name="simple_pink">#DFA1AE</color>
+    <color name="black">#000000</color>
+
+    <color name="btn_blue">#51B2F6</color>
+    <color name="tip_bg">#6B6B6B</color>
+    <color name="shallow_pink">#DFA1AE</color>
+    <color name="blue">#59CFE1</color>
+    <color name="gray_press">#dfddde</color>
+    <color name="background_gray">#EBE8E9</color>
+    <color name="holo_blue">#ff0099cc</color>
+    <color name="eva_middle">#F69D5A</color>
+    <color name="eva_down">#A8A6A7</color>
+
+
+    <!-- 分割线颜色 -->
+    <color name="common_line_gray">#D9D9D9</color>
+    <color name="score_spec">#3395f9</color>
+
+    <!-- pop menu-->
+    <color name="normal_unselected_color">#ECEBEB</color>
+    <color name="normal_selected_color">#ffffffff</color>
+
+    <color name="btn_blue_norm">#44A3E1</color>
+    <color name="btn_red_norm">#FF2743</color>
+    <!-- UI 最底层按钮颜色 -->
+    <color name="btn_buttom_block">#FF2D4B</color>
+</resources>

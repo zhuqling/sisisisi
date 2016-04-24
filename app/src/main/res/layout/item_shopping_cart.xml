@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/comm_divide_region"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small">
+        <CheckBox
+            android:id="@+id/cb_sel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_mid"
+            style="@style/Customer_CheckBox"/>
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:drawableLeft="@drawable/ic_shop_name"
+            android:drawablePadding="@dimen/margin_micro"
+            android:text="@string/order_car_total"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"/>
+    </LinearLayout>
+
+    <include layout="@layout/comm_divide_line"/>
+
+    <com.yizan.community.widget.MyListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/theme_divide_line"
+        android:dividerHeight="0.5dp"
+        />
+
+    <include layout="@layout/comm_divide_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_gray_background"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_car_total"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥0.0"
+            android:textColor="@color/theme_price"
+            android:textSize="@dimen/text_size"/>
+
+        <TextView
+            android:id="@+id/tv_notice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/order_not_include_fright"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size_micro"/>
+
+        <Button
+            android:id="@+id/btn_buy"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="@dimen/margin_small"
+            android:text="@string/order_car_balance"
+            />
+    </LinearLayout>
+    <include layout="@layout/comm_divide_line" />
+
+</LinearLayout>

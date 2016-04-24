@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/white"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/margin_small"
+              android:paddingLeft="@dimen/margin"
+              android:paddingRight="@dimen/margin"
+              android:paddingTop="@dimen/margin_small"
+    >
+
+
+    <CheckBox
+        android:id="@+id/cb_sel"
+        style="@style/Customer_CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <com.zongyou.library.widget.CustomImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/good_list_icon_width"
+        android:layout_height="@dimen/good_list_icon_width"
+        android:layout_marginLeft="@dimen/margin_mid"
+        app:roundHeight="@dimen/comm_corner"
+        app:roundWidth="@dimen/comm_corner"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/iv_clean"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="@string/order_car_total"
+                android:textColor="@color/theme_black_text"
+                android:textSize="@dimen/text_size_small"/>
+
+            <ImageView
+                android:id="@+id/iv_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_clean_min"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/order_car_total"
+                android:textColor="@color/theme_price"
+
+                android:textSize="@dimen/text_size"/>
+
+            <ImageView
+                android:id="@+id/iv_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sub"
+                />
+
+            <TextView
+                android:id="@+id/tv_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="25dp"
+                android:gravity="center"
+                android:layout_margin="@dimen/margin_micro"
+                android:text="0"
+                android:textColor="@color/theme_black_text"
+                android:textSize="@dimen/text_size_small"/>
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

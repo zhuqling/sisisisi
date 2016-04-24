@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_msg_title"
+            style="@style/TextViewStyle"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"
+            android:ellipsize="end"
+            android:maxLength="8"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/img_btn_is_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@+id/tv_msg_title"
+            android:src="@drawable/the_point"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/img_is_read_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/img_is_read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin"
+                android:src="@drawable/msg_no_selector" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/message_createtime"
+            style="@style/TextViewStyle.Gray"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/img_is_read_layout"
+            android:textSize="@dimen/text_size_small" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message_content"
+        style="@style/TextViewStyle.Gray"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginRight="@dimen/margin"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/gray_text_shallow"
+        android:textSize="@dimen/text_size_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:background="#E9E8E8" />
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.yizan.community.activity.ChangePwdActivity">
+
+    <EditText
+        android:id="@+id/et_old_pwd"
+        style="@style/EditTextStyle"
+        android:inputType="textPassword"
+        android:hint="@string/hint_input_old_pwd"
+        android:maxLength="20"/>
+
+    <EditText
+        android:id="@+id/et_new_pwd"
+        style="@style/EditTextStyle"
+        android:inputType="textPassword"
+        android:hint="@string/hint_input_new_pwd"
+        android:layout_marginTop="@dimen/margin_mid"
+        android:maxLength="20"/>
+    <EditText
+        android:id="@+id/et_new_pwd2"
+        style="@style/EditTextStyle"
+        android:inputType="textPassword"
+        android:hint="@string/hint_input_new_pwd2"
+        android:layout_marginTop="@dimen/margin_mid"
+        android:maxLength="20"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_pwd_limit"
+        android:textColor="@color/theme_black_text"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginTop="@dimen/margin_mid"
+        android:layout_marginBottom="@dimen/margin_large_biger"
+        />
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/ButtonStyle"
+        android:text="@string/ok"
+        android:layout_margin="0dp"
+        />
+</LinearLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.yizan.community.activity.UserBindPhoneActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/hint_send_identifying_code_sms"/>
+        <TextView
+            android:id="@+id/tv_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin"
+            android:text=""/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginBottom="@dimen/margin_large_biger"
+            android:layout_marginTop="@dimen/margin_mid" >
+
+            <EditText
+                android:id="@+id/et_identify_code"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1"
+                android:background="@drawable/corners_white"
+                android:hint="@string/label_identifying_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="@dimen/margin_small"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/theme_hint"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_get_identifying"
+                android:layout_width="120dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/corners_theme_selector"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lable_get_identifying"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/ButtonStyle"
+            android:layout_margin="0dp"
+            android:text="@string/next_step"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_mobile"
+            style="@style/EditTextStyle"
+            android:maxLength="11"
+            android:inputType="phone"
+            android:hint="@string/hine_new_mobile"/>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginBottom="@dimen/margin_large_biger"
+            android:layout_marginTop="@dimen/margin_small" >
+
+            <EditText
+                android:id="@+id/et_identify_code2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1"
+                android:background="@drawable/corners_white"
+                android:hint="@string/label_identifying_code"
+                android:inputType="number"
+                android:maxLength="6"
+                android:paddingLeft="@dimen/margin_small"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/theme_hint"
+                android:textSize="@dimen/text_size" />
+
+            <Button
+                android:id="@+id/btn_get_identifying2"
+                android:layout_width="120dp"
+                android:layout_height="fill_parent"
+                android:background="@drawable/corners_theme_selector"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/lable_get_identifying"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/ButtonStyle"
+            android:layout_margin="0dp"
+            android:text="@string/ok"/>
+    </LinearLayout>
+</RelativeLayout>

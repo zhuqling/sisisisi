@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.yizan.community.activity.UserNickActivity">
+
+    <EditText
+        android:id="@+id/et_nick"
+        style="@style/EditTextStyle"
+        android:maxLength="20"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/theme_black_text"
+        android:text="@string/hint_nick_desc"
+        android:layout_marginBottom="@dimen/margin_large_biger"/>
+
+    <Button
+        android:id="@+id/btn_commit"
+        style="@style/ButtonStyle"
+        android:layout_margin="0dp"
+        android:text="@string/ok" />
+</LinearLayout>

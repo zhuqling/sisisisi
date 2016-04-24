@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/style_edt_boder">
+
+    <!--<TextView-->
+        <!--android:id="@+id/moren_tv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/msg_setting_default"-->
+        <!--android:textSize="@dimen/margin"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_margin="@dimen/margin"/>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E9E7E8"/>
+
+    <TextView
+        android:id="@+id/delete_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/msg_delete"
+        android:textSize="@dimen/margin"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_margin="@dimen/margin"/>
+
+</LinearLayout>

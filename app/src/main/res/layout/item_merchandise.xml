@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/list_selector"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.zongyou.library.widget.CustomImageView
+            android:id="@+id/merchandise_icon"
+            android:layout_width="@dimen/seller_list_icon_width"
+            android:layout_height="@dimen/seller_list_icon_width"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginTop="@dimen/margin"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_mid"
+            android:layout_marginRight="@dimen/margin"
+
+            android:layout_toRightOf="@+id/merchandise_icon">
+
+            <TextView
+                android:id="@+id/merchandise_title"
+                style="@style/TextViewStyle"
+                android:layout_marginRight="25dp"
+                android:text="@string/show_text"
+                android:textSize="@dimen/text_size"/>
+
+            <TextView
+                android:id="@+id/tv_sales_num"
+                style="@style/TextViewStyle"
+                android:layout_below="@id/merchandise_title"
+                android:layout_marginTop="2dp"
+                android:text="@string/show_text"
+                android:textColor="@color/theme_grey_text"
+                android:textSize="@dimen/text_size_small"
+                />
+
+            <ImageView
+                android:id="@+id/merchandise_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/delete"/>
+
+            <TextView
+                android:id="@+id/merchandise_price"
+                style="@style/TextViewStyle"
+                android:layout_below="@id/tv_sales_num"
+                android:layout_marginTop="2dp"
+                android:text="$28"
+                android:textColor="@color/theme_main_text"
+                android:textSize="@dimen/text_size_small"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/merchandise_icon"
+        android:background="@color/theme_divide_line"
+        />
+
+</LinearLayout>

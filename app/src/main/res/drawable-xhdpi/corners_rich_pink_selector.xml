@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/corners_pink_normal" android:state_enabled="true" android:state_pressed="false"/>
+    <item android:drawable="@drawable/corners_pink_selected" android:state_enabled="true" android:state_pressed="true"/>
+    <item android:drawable="@drawable/corners_pink_normal" android:state_enabled="true"/>
+    <item android:drawable="@drawable/corners_mini_gray" android:state_enabled="false"/>
+
+</selector>

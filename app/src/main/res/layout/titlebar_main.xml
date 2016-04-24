@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/title_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/title_bar_margin"
+        android:text="@string/main_sel_location"
+        android:textColor="@color/theme_title_text"
+        android:textSize="@dimen/text_size_medium"
+        android:maxLength="14"
+        android:ellipsize="start"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/ic_arrow_down"
+        android:drawablePadding="@dimen/margin_micro"/>
+
+
+    <ImageButton
+        android:id="@+id/ib_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/title_bar_margin"
+        android:src="@drawable/ic_search"/>
+    <Button
+        android:id="@+id/title_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/title_bar_margin"
+        android:textColor="@color/theme_title_text"
+        android:textSize="@dimen/text_size"
+        android:visibility="invisible"/>
+
+    <View
+        android:id="@+id/view_least"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/shallow_gray"
+        android:layout_alignParentBottom="true"
+        />
+</RelativeLayout>

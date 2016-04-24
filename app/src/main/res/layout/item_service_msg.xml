@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/list_selector"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/msg_is_read"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:src="@drawable/the_point"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/msg_title"
+                style="@style/TextViewStyle"
+                android:layout_marginLeft="@dimen/margin_micro"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@string/show_text"
+                android:textColor="@color/theme_black_text"
+                android:textSize="@dimen/text_size"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:maxLines="3"
+            android:paddingLeft="@dimen/margin_micro"
+            android:text="33333333"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size"
+            />
+
+        <TextView
+            android:id="@+id/msg_date"
+            style="@style/TextViewStyle"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="right"
+            android:text="2015-02-28 09:30"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size_micro"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/margin"
+        android:background="@color/theme_divide_line"/>
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yizan.community.activity.MapAddressActivity">
+
+    <include layout="@layout/comm_divide_region"/>
+
+    <LinearLayout
+        android:id="@+id/choose_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small">
+
+        <EditText
+            android:id="@+id/choose_community"
+            style="@style/EditTextStyle.Fillet"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:hint="@string/address_add_hint"
+            android:paddingRight="@dimen/margin_small"
+            android:textColor="@color/theme_black_text"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <TextView
+            android:id="@+id/btn_search"
+            style="@style/TextViewStyle"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin"
+            android:text="@string/search"/>
+
+    </LinearLayout>
+
+
+    <com.tencent.tencentmap.mapsdk.map.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin"
+        android:textColor="@color/white"
+        android:text="@string/seve"
+        android:background="@drawable/btn_corners_theme_selector"/>
+</LinearLayout>

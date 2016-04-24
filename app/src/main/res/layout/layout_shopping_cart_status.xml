@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/text_view_height"
+    >
+    <include layout="@layout/comm_divide_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin">
+
+            <ImageView
+                android:id="@+id/iv_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_shop_car"/>
+
+            <TextView
+                android:id="@+id/tv_total_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="-10dp"
+                android:layout_toRightOf="@+id/iv_cart"
+                android:background="@drawable/main_tab_msg_shape"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_micro"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            style="@style/TextViewStyle"
+            android:text="@string/order_total_price"
+            android:textSize="@dimen/text_size_small"
+            android:layout_marginLeft="@dimen/margin"
+            />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            style="@style/TextViewStyle"
+            android:layout_width="0dp"
+            android:layout_weight="1.0"
+            android:textColor="@color/theme_price"
+            />
+
+        <TextView
+            android:id="@+id/tv_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/buttom_bar_button_width"
+            android:background="@drawable/theme_block_button"
+            android:gravity="center"
+            android:minHeight="@dimen/text_view_height"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            android:text="@string/order_select_ok"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</LinearLayout>

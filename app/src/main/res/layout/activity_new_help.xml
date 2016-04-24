@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white">
+<!--用户根据自己的实际运营情况，设计一些有趣的图文说明-->
+    <TextView
+        style="@style/TextViewStyle"
+        android:layout_margin="@dimen/margin"/>
+
+</LinearLayout>

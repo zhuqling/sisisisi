@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.1.0-rc1'
+        classpath 'org.quanqi:pgyer:0.1.2'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+apply plugin: 'org.quanqi.pgyer'
+
+pgyer {
+    _api_key = "e3d6725adc24fce33c5210271ef1efed"
+    uKey = "4602339dac5705c81578cd8580505ab5"
+}
+
+apks {
+    release {
+        sourceFile = file("app/o2o-client-app-release.apk")
+        //optional
+//        message = "需求1.2"
+//        visibility = "public" // public or private
+    }
+}

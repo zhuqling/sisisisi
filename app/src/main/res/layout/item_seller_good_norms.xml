@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="@dimen/button_height"
+              android:gravity="center_vertical"
+              android:paddingRight="@dimen/margin"
+              android:paddingTop="@dimen/margin_micro"
+              android:paddingBottom="@dimen/margin_micro"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4.0"
+        android:text="111"
+        android:layout_marginRight="@dimen/margin"
+        android:textColor="@color/theme_black_text"/>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.0"
+        android:text="¥0"
+        android:layout_marginRight="@dimen/margin"
+        android:textColor="@color/theme_price"/>
+    <ImageView
+        android:id="@+id/iv_sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_sub"
+        />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_micro"
+        android:text="0"
+        android:textColor="@color/theme_black_text"
+        android:textSize="@dimen/text_size_small"/>
+
+    <ImageView
+        android:id="@+id/iv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        />
+</LinearLayout>

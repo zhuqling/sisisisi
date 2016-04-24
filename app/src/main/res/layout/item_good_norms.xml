@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView android:id="@+id/tv_name"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/good_norms_selector"
+          android:gravity="center"
+          android:minHeight="30dp"
+          android:minWidth="36dp"
+          android:paddingLeft="@dimen/margin_small"
+          android:paddingRight="@dimen/margin_small"
+          android:text=""
+          android:textSize="@dimen/text_size">
+</TextView>

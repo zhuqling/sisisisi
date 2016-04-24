@@ -1,0 +1,233 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.yizan.community.activity.AddCommentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:layout_height="45dp"
+            android:gravity="center_vertical">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="23dp"
+                android:background="@color/theme"/>
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:text="@string/order_d_sn"/>
+
+            <TextView
+                android:id="@+id/tv_sn"
+                style="@style/Cell_Text_Value"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:singleLine="true"
+                android:text="0"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin"
+            android:paddingRight="@dimen/margin"
+            >
+
+            <LinearLayout
+                android:id="@+id/gv_list"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.0"
+                android:orientation="horizontal">
+
+                <com.yizan.community.widget.SquareLayout
+
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_height">
+
+                    <com.zongyou.library.widget.CustomImageView
+                        android:id="@+id/order_img0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_square"
+                        app:roundHeight="@dimen/comm_corner"
+                        app:roundWidth="@dimen/comm_corner"/>
+                </com.yizan.community.widget.SquareLayout>
+
+                <com.yizan.community.widget.SquareLayout
+
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_height">
+
+                    <com.zongyou.library.widget.CustomImageView
+                        android:id="@+id/order_img1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_square"
+                        app:roundHeight="@dimen/comm_corner"
+                        app:roundWidth="@dimen/comm_corner"/>
+                </com.yizan.community.widget.SquareLayout>
+
+                <com.yizan.community.widget.SquareLayout
+
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_height">
+
+                    <com.zongyou.library.widget.CustomImageView
+                        android:id="@+id/order_img2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_square"
+                        app:roundHeight="@dimen/comm_corner"
+                        app:roundWidth="@dimen/comm_corner"/>
+                </com.yizan.community.widget.SquareLayout>
+
+                <com.yizan.community.widget.SquareLayout
+
+                    android:layout_width="@dimen/image_height"
+                    android:layout_height="@dimen/image_height">
+
+                    <com.zongyou.library.widget.CustomImageView
+                        android:id="@+id/order_img3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_default_square"
+                        app:roundHeight="@dimen/comm_corner"
+                        app:roundWidth="@dimen/comm_corner"/>
+                </com.yizan.community.widget.SquareLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_goods_num"
+                style="@style/Cell_Text_Value"
+                android:layout_marginRight="0dp"
+                android:drawablePadding="@dimen/margin_small"
+                android:drawableRight="@drawable/ic_arrow_right"
+                tools:text="@string/evaluate_image_number_residue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:background="@color/theme_background"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="@string/evaluate_grade_text"
+                android:textSize="@dimen/text_size"/>
+
+            <ImageView
+                android:id="@+id/iv_star1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/ic_star_on_big"/>
+
+            <ImageView
+                android:id="@+id/iv_star2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/ic_star_on_big"/>
+
+            <ImageView
+                android:id="@+id/iv_star3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/ic_star_on_big"/>
+
+            <ImageView
+                android:id="@+id/iv_star4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/ic_star_on_big"/>
+
+            <ImageView
+                android:id="@+id/iv_star5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_small"
+                android:src="@drawable/ic_star_on_big"/>
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <EditText
+            android:id="@+id/et_content"
+            style="@style/EditTextStyle"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:gravity="top|left"
+            android:hint="@string/evaluate_edit_hint"
+            android:maxLength="200"
+            android:padding="@dimen/margin"/>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <com.yizan.community.widget.MyGridView
+            android:id="@+id/gv_pics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:horizontalSpacing="@dimen/margin_micro"
+            android:verticalSpacing="@dimen/margin_micro"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"/>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            android:id="@+id/ll_anonymous"
+            style="@style/Cell_Container"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                style="@style/Cell_Text_Tail"
+                android:layout_marginRight="@dimen/margin_micro"
+                android:text="@string/evaluate_Anonymous_text"/>
+
+            <CheckBox
+                android:id="@+id/cb_anonymous"
+                style="@style/Customer_CheckBox"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin"
+                android:clickable="false"/>
+        </LinearLayout>
+        <include layout="@layout/comm_divide_region" />
+        <Button
+            android:id="@+id/btn_commit"
+            style="@style/common_buttom_style_one"
+            android:background="@color/theme_red_background"
+            android:text="@string/submit"/>
+    </LinearLayout>
+
+</ScrollView>

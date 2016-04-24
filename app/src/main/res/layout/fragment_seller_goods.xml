@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.yizan.community.fragment.SellerGoodsFragment">
+
+    <com.yizan.community.widget.MarqueeTextView
+        android:id="@+id/tv_notice"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:drawableLeft="@drawable/ic_notice_red"
+        android:drawablePadding="@dimen/margin_small"
+        android:background="#FAF2AA"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:focusable="true"
+        android:textSize="@dimen/text_size_small"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/theme_main_text"/>
+    <LinearLayout
+        android:id="@+id/ll_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_notice"
+        android:layout_above="@+id/layout_order_select"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/lv_class"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:background="@color/theme_background"
+            android:choiceMode="singleChoice"
+            android:divider="@color/theme_divide_line"
+            android:dividerHeight="0.5dp"
+            android:listSelector="@drawable/list_selector"
+
+            />
+
+        <com.yizan.community.widget.stickylistheaders.StickyListHeadersListView
+            android:id="@+id/lv_goods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:drawSelectorOnTop="true"
+            android:fastScrollEnabled="false"
+            android:dividerHeight="0dp"
+            android:divider="@null"
+            android:overScrollMode="never"
+            android:scrollbarStyle="outsideOverlay"
+            android:listSelector="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
+    <com.yizan.community.widget.ShoppingCartView
+        android:id="@+id/layout_order_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

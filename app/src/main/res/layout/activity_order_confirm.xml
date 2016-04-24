@@ -1,0 +1,332 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.yizan.community.activity.OrderConfirmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_addr_line"/>
+
+        <RelativeLayout
+            android:id="@+id/ll_address_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/iv_arrow"
+                android:layout_marginRight="@dimen/margin"
+                android:orientation="vertical"
+                android:padding="@dimen/margin">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_user_name"
+                        style="@style/TextViewStyle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:text=""/>
+
+
+                    <TextView
+                        android:id="@+id/tv_user_tel"
+                        style="@style/TextViewStyle"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/tv_addr"
+                    style="@style/TextViewStyle"
+                    android:layout_marginTop="@dimen/margin"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_notice"
+                style="@style/TextViewStyle"
+                android:layout_centerInParent="true"
+                android:text="@string/main_sel_location"/>
+
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin"
+                android:src="@drawable/ic_arrow_right"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_addr_line"/>
+
+        <include layout="@layout/comm_divide_region"/>
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:gravity="center_vertical">
+
+            <com.yizan.community.widget.MyGridView
+                android:id="@+id/gv_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_weight="1.0"
+                android:horizontalSpacing="@dimen/margin_small"
+                android:numColumns="4"/>
+
+            <TextView
+                android:id="@+id/tv_goods_num"
+                style="@style/Cell_Text_Value"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_deliver_title"
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_deliver_way"
+            android:text="@string/order_head_deliver_way"/>
+
+        <LinearLayout
+            android:id="@+id/ll_deliver_container"
+            style="@style/Cell_Container">
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:text="@string/order_d_deliver_way"/>
+
+            <TextView
+                android:id="@+id/tv_deliver_way"
+                style="@style/Cell_Text_Value"
+                android:text="@string/msg_business_delivery"
+                />
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line_margin"/>
+
+        <LinearLayout
+            android:id="@+id/ll_deliver_time"
+            style="@style/Cell_Container"
+            >
+
+            <TextView
+                android:id="@+id/tv_deliver_time_head"
+                style="@style/Cell_Text_Head"
+                android:text="@string/order_d_deliver_time"/>
+
+            <TextView
+                android:id="@+id/tv_deliver_time"
+                style="@style/Cell_Text_Tail"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="left|center_vertical"
+                android:text=""
+                />
+
+            <ImageView
+                style="@style/Cell_Right_Arrow"/>
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <TextView
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_order_other"
+            android:text="@string/order_head_other"/>
+
+        <LinearLayout
+            style="@style/Cell_Block_Container">
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:layout_marginTop="@dimen/margin_small"
+                android:visibility="gone"
+                android:text="@string/msg_is_greeting_card"/>
+
+            <EditText
+                android:id="@+id/et_greeting"
+                style="@style/EditTextStyle"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:hint="@string/msg_plase_fill_out_card"
+                android:maxLength="50"
+                />
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:visibility="gone"
+                android:text="@string/msg_is_need_invoice"/>
+
+            <EditText
+                android:id="@+id/et_invoice"
+                style="@style/EditTextStyle"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:hint="@string/msg_plase_fill_out_invoice_header"
+                android:visibility="gone"
+                android:maxLength="50"
+                />
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/order_d_remark"/>
+
+            <EditText
+                android:id="@+id/et_remark"
+                style="@style/EditTextStyle"
+                android:layout_marginBottom="@dimen/margin"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:hint="@string/msg_plase_fill_out_remark_hint"
+                android:maxLength="50"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_order_balance"
+            android:text="@string/order_head_balance"/>
+
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Block_Container">
+
+            <LinearLayout
+                style="@style/Cell_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_goods_price"/>
+
+                <TextView
+                    android:id="@+id/tv_goods_price"
+                    style="@style/Cell_Text_Tail"
+                    android:text="10"
+                    />
+            </LinearLayout>
+
+            <include layout="@layout/comm_divide_line_margin"/>
+
+            <LinearLayout
+                style="@style/Cell_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_carriage"/>
+
+                <TextView
+                    android:id="@+id/tv_carriage"
+                    style="@style/Cell_Text_Tail"
+                    android:text="10"
+                    />
+            </LinearLayout>
+
+            <include layout="@layout/comm_divide_line_margin"/>
+
+            <LinearLayout
+                style="@style/Cell_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_total"/>
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    style="@style/Cell_Text_Tail.Red"
+                    android:text="10"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_pay_way"
+            android:text="@string/order_d_pay_way"/>
+
+
+        <com.yizan.community.widget.MyListView
+            android:id="@+id/lv_pay_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            />
+
+        <TextView
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_pay_way"
+            android:text="@string/msg_plase_complete_pay"/>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:gravity="center_vertical"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp">
+
+            <TextView
+                style="@style/Cell_Text_Head"
+                android:text="@string/msg_due_money"/>
+
+            <TextView
+                android:id="@+id/tv_total_price"
+                style="@style/Cell_Text_Tail.Red"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:gravity="left|center_vertical"
+                android:text="10"
+                android:textSize="@dimen/text_size"
+                />
+
+            <TextView
+                android:id="@+id/tv_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/theme_block_button"
+                android:gravity="center"
+                android:minHeight="45dp"
+                android:minWidth="120dp"
+                android:text="@string/msg_go_pay"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

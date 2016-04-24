@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical"
+    tools:context="com.yizan.community.fragment.OrderPageFragment">
+
+    <com.yizan.community.widget.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        app:pstsDividerColor="@color/theme_divide_line"
+        app:pstsIndicatorColor="@color/theme_divide_line"
+        app:pstsIndicatorHeight="0.5dp"
+        app:pstsShouldExpand="true"
+        app:pstsTabBackground="@drawable/order_page_tab_background"
+        app:pstsUnderlineColor="@color/theme_divide_line"
+        app:pstsUnderlineHeight="0.5dp"
+        app:zmsSelectedTabTextColor="@color/theme_black_text"
+        app:zmsSelectedTabTextSize="@dimen/text_size_small"
+        app:zmsTabTextColor="@color/theme_black_text"
+        app:zmsTabTextSize="@dimen/text_size_small" />
+
+    <android.support.v4.view.ViewPager
+        android:layout_weight="1"
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+</LinearLayout>

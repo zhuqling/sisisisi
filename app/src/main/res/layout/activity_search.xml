@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/choose_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/choose_community"
+            style="@style/EditTextStyle.Fillet"
+            android:layout_width="0dp"
+            android:layout_margin="@dimen/margin"
+            android:layout_weight="1"
+            android:hint="@string/hint_keyword"
+            android:paddingRight="@dimen/margin_small"
+            android:textColor="@color/theme_black_text" />
+
+        <RelativeLayout
+            android:id="@+id/btn_search_rl"
+            android:layout_width="60dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/margin"
+            android:background="@drawable/corners_white">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/search" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/search_error_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_background"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/sorry_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:text="@string/msg_not_search_text"
+                android:textColor="@color/theme_black_text"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        style="@style/TextViewStyle"
+        android:layout_marginBottom="@dimen/margin_micro"
+        android:layout_marginLeft="@dimen/margin"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/msg_hot_search_text"
+        android:textSize="@dimen/text_size" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.yizan.community.widget.flow.FlowLayout
+                android:id="@+id/fl_hots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_marginTop="@dimen/margin_small"
+                app:lineSpacing="10dp"
+                app:tagSpacing="15dp" />
+            <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:background="@color/theme_divide_line"/>-->
+
+            <com.yizan.community.widget.MyListView
+                android:id="@+id/search_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:drawSelectorOnTop="false"
+                android:listSelector="@drawable/list_selector"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/clear_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/delete" />
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:text="@string/msg_clean_history"
+                    android:textColor="@color/theme_grey_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

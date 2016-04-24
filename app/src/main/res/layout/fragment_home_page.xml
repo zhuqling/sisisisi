@@ -1,0 +1,195 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_retry_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pay_err"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/margin"
+            android:textColor="@color/theme_black_text"
+            android:text="@string/hint_error_load_data"/>
+        <TextView
+            android:id="@+id/tv_shake_open_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_marginTop="@dimen/margin_micro"
+            android:textColor="@color/theme_black_text"
+            android:text="@string/hint_shake_open_door"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:minWidth="100dp"
+            android:padding="@dimen/margin_small"
+            android:text="@string/retry"
+            android:textColor="@color/white"
+            android:background="@drawable/corners_theme_selector"/>
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/sv_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.jude.rollviewpager.RollPagerView
+                android:id="@+id/roll_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/banner_height"
+                app:rollviewpager_hint_mode="point"
+                app:rollviewpager_play_delay="3000"/>
+
+            <com.yizan.community.widget.MyGridView
+                android:id="@+id/gv_classify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="4"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:verticalSpacing="@dimen/margin_small"
+                android:horizontalSpacing="@dimen/margin_micro"
+                android:gravity="center_horizontal"
+                />
+
+            <include
+                android:id="@+id/line_hor_notice"
+                layout="@layout/comm_divide_region"/>
+
+            <LinearLayout
+                android:id="@+id/ll_hor_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/iv_notice_1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/homepage_hor_notice_height"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1.0"/>
+                <View
+                    android:id="@+id/v_hor_notice_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="@dimen/homepage_hor_notice_height"
+                    android:background="@color/theme_divide_line" />
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/iv_notice_2"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/homepage_hor_notice_height"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="1.0"/>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line_list_notice"
+                layout="@layout/comm_divide_region"/>
+
+            <com.yizan.community.widget.MyListView
+                android:id="@+id/lv_notices"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/theme_divide_line"
+                android:dividerHeight="0.5dp"
+                android:background="@color/white"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_goods_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/ic_recomment_goods"
+                    android:drawablePadding="@dimen/margin_micro"
+                    android:gravity="center_vertical"
+                    android:text="@string/home_recomment_goods"/>
+
+                <TextView
+                    android:id="@+id/tv_goods_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="@string/home_more"/>
+            </LinearLayout>
+
+            <com.yizan.community.widget.MyGridView
+                android:id="@+id/gv_recomment_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="3"
+                android:listSelector="@android:color/transparent"
+                android:gravity="center_horizontal"
+
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_seller_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:drawableLeft="@drawable/ic_shop_name"
+                    android:drawablePadding="@dimen/margin_micro"
+                    android:gravity="center_vertical"
+                    android:text="@string/home_recomment_shops"/>
+
+                <TextView
+                    android:id="@+id/tv_seller_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:text="@string/home_more"/>
+            </LinearLayout>
+
+            <com.yizan.community.widget.MyListView
+                android:id="@+id/lv_recomment_sellers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:listSelector="@android:color/transparent"
+                android:divider="@color/theme_divide_line"
+                android:dividerHeight="0.5dp"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

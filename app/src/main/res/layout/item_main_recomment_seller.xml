@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/list_selector"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="@dimen/margin">
+
+    <com.zongyou.library.widget.CustomImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/seller_list_icon_width"
+        android:layout_height="@dimen/seller_list_icon_width"
+        android:src="@drawable/ic_default_square"
+        app:border_color="@color/theme_gray_background"
+        app:border_width="0.5dp"
+        app:roundedCornerRadius="@dimen/image_angle"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_size"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_time"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/margin_micro"-->
+        <!--android:textColor="@color/gray_text_shallow"-->
+        <!--android:textSize="@dimen/text_size_micro" />-->
+        <!--<TextView-->
+        <!--android:id="@+id/distribution_time"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/margin_micro"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="@color/gray_text_shallow"-->
+        <!--android:textSize="@dimen/text_size_micro" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <RatingBar
+                android:id="@+id/rb_star"
+                style="@style/RatingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_micro"
+                android:layout_marginTop="@dimen/margin_micro"
+                android:isIndicator="true"
+                />
+            <TextView
+                android:id="@+id/tv_sales"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textColor="@color/theme_grey_text"
+                android:textSize="@dimen/text_size_micro"
+                android:text="@string/hint_sales_num"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text_shallow"
+            android:textSize="@dimen/text_size_micro"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_map"
+        android:drawablePadding="2dp"
+        android:textColor="@color/gray_text_shallow"
+        android:textSize="@dimen/text_size_micro"/>
+</LinearLayout>

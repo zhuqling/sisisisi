@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+              android:descendantFocusability="blocksDescendants"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingRight="@dimen/margin"
+        android:paddingTop="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/operate_tv"
+            style="@style/TextViewStyle"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            tools:text="@string/business_name"/>
+
+        <ImageView
+            android:id="@+id/operate_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_operate_checked"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_deliver"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin"
+        android:background="@color/theme_divide_line"/>
+
+    <com.yizan.community.widget.MyListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@drawable/list_selector"/>
+</LinearLayout>

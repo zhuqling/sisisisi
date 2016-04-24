@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:id="@+id/rl_root"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignTop="@+id/ll_container"
+        android:background="@drawable/bg_addr_line"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/iv_arrow"
+        android:layout_marginRight="@dimen/margin"
+        android:padding="@dimen/margin"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/TextViewStyle"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text=""/>
+
+
+            <TextView
+                android:id="@+id/tv_tel"
+                style="@style/TextViewStyle"
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_addr"
+            style="@style/TextViewStyle"
+            android:layout_marginTop="@dimen/margin"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_notice"
+        style="@style/TextViewStyle"
+        android:text="@string/main_sel_location"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_container"
+        android:background="@drawable/bg_addr_line"
+        />
+
+    <ImageView
+        android:id="@+id/iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/margin"
+        android:src="@drawable/ic_arrow_right"/>
+</RelativeLayout>

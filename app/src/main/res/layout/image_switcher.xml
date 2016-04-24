@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/corners_white"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/item1"
+                style="@style/common_buttom_style_one"
+                android:background="@null"
+                android:text="@string/msg_photo_mode"
+                android:textColor="@color/theme_main_text" />
+
+            <include layout="@layout/comm_divide_line" />
+            <Button
+                android:id="@+id/item2"
+                style="@style/common_buttom_style_one"
+                android:background="@null"
+                android:text="@string/msg_photo_album"
+                android:textColor="@color/theme_main_text" />
+
+            <include layout="@layout/comm_divide_line" />
+
+            <Button
+                android:visibility="gone"
+                android:id="@+id/item3"
+                style="@style/common_buttom_style_one"
+                android:background="@null"
+                android:text="@string/msg_photo_album"
+                android:textColor="@color/theme_main_text" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/cancel"
+            style="@style/common_buttom_style"
+            android:layout_marginBottom="60dip"
+            android:layout_marginTop="15dip"
+            android:background="@drawable/corners_white"
+            android:text="@string/cancel"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+</RelativeLayout>

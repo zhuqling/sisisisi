@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:paddingRight="@dimen/margin"
+              android:paddingTop="@dimen/margin"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.zongyou.library.widget.CircleImageView
+            android:id="@+id/iv_image"
+            android:layout_width="@dimen/image_height_small"
+            android:layout_height="@dimen/image_height_small"
+            android:src="@drawable/ic_default_square"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin"
+            android:layout_marginRight="@dimen/margin"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_weight="1.0">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/theme_grey_text"
+                android:textSize="@dimen/text_size_small"/>
+
+            <RatingBar
+                android:id="@+id/rb_star"
+                style="@style/RatingBarStyle"
+                android:layout_below="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:isIndicator="true"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/theme_grey_text"
+            android:textSize="@dimen/text_size_small"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="71dp"
+        android:textColor="@color/theme_black_text"
+        android:textSize="@dimen/text_size"/>
+
+    <com.yizan.community.widget.MyGridView
+        android:id="@+id/gv_pics"
+        android:layout_marginLeft="71dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="@dimen/margin_small"
+        android:verticalSpacing="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:listSelector="@drawable/list_selector"
+        android:numColumns="4"/>
+
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_micro"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="71dp"
+        android:background="@color/theme_background"
+        android:textColor="@color/theme_black_text"
+        android:textSize="@dimen/text_size_small"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/theme_divide_line"
+        android:layout_marginTop="@dimen/margin" />
+
+</LinearLayout>

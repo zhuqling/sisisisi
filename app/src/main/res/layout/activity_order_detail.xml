@@ -1,0 +1,365 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+
+        <!--<com.android.volley.toolbox.NetworkImageView-->
+            <!--android:id="@+id/order_flow_image"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="@dimen/margin"-->
+            <!--android:scaleType="centerCrop"/>-->
+        <ImageView
+            android:id="@+id/order_flow_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_large"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_order_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/margin"
+            android:background="@drawable/bg_order_state"
+            android:paddingBottom="@dimen/margin_micro"
+            android:paddingLeft="@dimen/margin_mid"
+            android:paddingRight="@dimen/margin_mid"
+            android:paddingTop="@dimen/margin_micro"
+            android:textColor="@color/theme_black_text"
+            android:textSize="@dimen/text_size_micro"
+            />
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Container"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_deliver_title"
+                style="@style/Cell_Text_Head"
+                android:text="@string/order_d_deliver_man"/>
+
+            <TextView
+                android:id="@+id/tv_deliver_man"
+                style="@style/Cell_Text_Value"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:singleLine="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/order_quik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin"
+                android:background="@drawable/btn_corners_gray_selector"
+                android:gravity="center"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin"
+                android:paddingRight="@dimen/margin"
+                android:paddingTop="@dimen/margin_small"
+                android:text="@string/order_quik"
+                android:textColor="@color/theme_black_text"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_region"/>
+
+        <LinearLayout
+            android:id="@+id/ll_seller_container"
+            style="@style/Cell_Container"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_seller_name"
+                style="@style/Cell_Header_Text"
+                android:layout_width="0dp"
+                android:layout_weight="1.0"
+                android:drawableLeft="@drawable/ic_shop_name"
+                android:singleLine="true"
+                android:text="@string/business"/>
+
+            <ImageView
+                style="@style/Cell_Right_Arrow"/>
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Container">
+
+            <RelativeLayout
+                android:id="@+id/rl_call_customer"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_corners_gray_selector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_call_customer"
+                    android:drawablePadding="@dimen/margin_micro"
+                    android:gravity="center_vertical"
+                    android:text="@string/msg_call_service"
+                    android:textColor="@color/theme_black_text"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_call_seller"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_corners_gray_selector">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_call_seller"
+                    android:drawablePadding="@dimen/margin_micro"
+                    android:gravity="center_vertical"
+                    android:text="@string/msg_call_business"
+                    android:textColor="@color/theme_black_text"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <TextView
+            style="@style/Cell_Header_Text"
+            android:drawableLeft="@drawable/ic_order_detail"
+            android:text="@string/title_activity_order_detail"
+            android:textColor="@color/theme_grey_text"/>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.yizan.community.widget.MyListView
+                android:id="@+id/lv_goods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin"
+                android:background="@color/white"
+                android:listSelector="@null"
+                android:divider="@color/theme_divide_line"
+                android:dividerHeight="0.5dp"/>
+
+            <include layout="@layout/comm_divide_line_margin"/>
+
+            <LinearLayout
+                android:id="@+id/ll_deliver_price"
+                style="@style/Cell_Container">
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_carriage"/>
+
+                <TextView
+                    android:id="@+id/tv_carriage"
+                    style="@style/Cell_Text_Tail"
+                    android:text="¥0"/>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/line_deliver_price"
+                layout="@layout/comm_divide_line_margin"/>
+
+            <LinearLayout style="@style/Cell_Container">
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_total"/>
+
+                <TextView
+                    android:id="@+id/tv_total"
+                    style="@style/Cell_Text_Tail.Red"
+                    android:text="¥0"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_line"/>
+
+        <LinearLayout
+            style="@style/Cell_Block_Container"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small"
+            >
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/msg_consignee_text"/>
+
+                <TextView
+                    android:id="@+id/tv_user_name"
+                    style="@style/Cell_Text_Value"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/msg_phone_number_text"/>
+
+                <TextView
+                    android:id="@+id/tv_user_tel"
+                    style="@style/Cell_Text_Value"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/msg_address_text"/>
+
+                <TextView
+                    android:id="@+id/tv_addr"
+                    style="@style/Cell_Text_Value"
+                    android:singleLine="false"
+                    android:maxLines="2"
+                    android:layout_marginRight="5dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_pay_way"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_way"
+                    style="@style/Cell_Text_Value"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/msg_client_order_time"/>
+
+                <TextView
+                    android:id="@+id/tv_order_time"
+                    style="@style/Cell_Text_Value"
+                    android:singleLine="true"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_deliver_time"
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/msg_appoint_time"/>
+
+                <TextView
+                    android:id="@+id/tv_deliver_time"
+                    style="@style/Cell_Text_Value"
+                    android:singleLine="true"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_sn"/>
+
+                <TextView
+                    android:id="@+id/tv_order_sn"
+                    style="@style/Cell_Text_Value"
+                    android:singleLine="true"
+                    android:text=""/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Cell_Small_Container"
+
+                >
+
+                <TextView
+                    style="@style/Cell_Text_Head"
+                    android:text="@string/order_d_remark"/>
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    style="@style/Cell_Text_Value"
+                    android:text=""/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include layout="@layout/comm_divide_region"/>
+
+        <LinearLayout
+            style="@style/Cell_Container">
+
+            <TextView
+                android:id="@+id/tv_left_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_corners_blue_selector"
+                android:gravity="center"
+                android:text="@string/evaluate"
+                android:textColor="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/tv_right_button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/margin"
+                android:layout_marginRight="@dimen/margin"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_corners_theme_selector"
+                android:gravity="center"
+                android:text="@string/msg_go_stroll"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

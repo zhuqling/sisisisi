@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.yizan.community.activity.PayWayActivity">
+
+    <TextView
+        style="@style/Cell_Header_Text"
+        android:drawableLeft="@drawable/ic_pay_way"
+        android:text="@string/order_d_pay_way"
+        android:textColor="@color/theme_grey_text"/>
+
+    <include layout="@layout/comm_divide_line"/>
+
+    <ListView
+        android:id="@+id/lv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+
+    <include layout="@layout/comm_divide_line"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_margin="@dimen/margin"
+            android:background="@drawable/btn_corners_theme_selector"
+            android:text="@string/msg_go_pay"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <include layout="@layout/comm_divide_line"/>
+</LinearLayout>

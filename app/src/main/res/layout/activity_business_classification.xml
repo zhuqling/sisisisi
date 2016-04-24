@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/business_all_cates"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+
+            <com.yizan.community.widget.doublemenu.PopMenuButton
+                android:id="@+id/pb_cates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:background="@color/white"
+                android:textSize="@dimen/text_size_medium"
+                android:layout_centerInParent="true"
+                android:visibility="visible"
+                />
+
+            <TextView
+                android:id="@+id/business_all_text"
+                style="@style/TextViewStyle"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/margin_mid"
+                android:drawableRight="@drawable/down_arrow"
+                android:text="@string/all"
+                android:textSize="@dimen/text_size_medium"  />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#DEDCDD" />
+
+        <RelativeLayout
+            android:id="@+id/business_complex_cates"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/business_complex_text"
+                style="@style/TextViewStyle"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/margin_mid"
+                android:drawableRight="@drawable/down_arrow"
+                android:text="@string/sort_all"
+                android:textSize="@dimen/text_size_medium" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/theme_divide_line" />
+
+
+    <include layout="@layout/empty_view" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/business_classification_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@drawable/divider_list"
+            android:drawSelectorOnTop="false"
+            android:listSelector="@drawable/list_selector"
+            android:scrollbars="none" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+
+</LinearLayout>
